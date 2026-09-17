@@ -30,3 +30,8 @@ export const getAllInterviewReport = async()=>{
       
       return response.data
 }
+
+export const sendChatMessage = async (message) => {
+    const response = await api.post('/chatbot', { message })
+    return response.data
+}

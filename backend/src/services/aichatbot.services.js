@@ -4,7 +4,8 @@ const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY
 })
 
-async function chatbot({ text }) {
+async function chatbot(input) {
+    const text = typeof input === 'string' ? input : (input?.text || "");
 
 
 
